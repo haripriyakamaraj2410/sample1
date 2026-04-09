@@ -3,11 +3,11 @@ kind: Service
 metadata:
   name: myapp-service
 spec:
+  type: NodePort
   selector:
     app: myapp
-  type: NodePort
   ports:
     - protocol: TCP
       port: 80
       targetPort: 80
-      nodePort: 31687  # You can choose any available port between 30000-32767
+      nodePort: 31687
