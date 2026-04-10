@@ -3,25 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Front Page</title>
+    <title>Modern Landing Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        body { font-family: sans-serif; margin: 0; line-height: 1.6; }
-        nav { background: #333; color: #fff; padding: 1rem; text-align: center; }
-        .hero { background: #f4f4f4; padding: 50px; text-align: center; }
-        .container { padding: 20px; text-align: center; }
-        .card { border: 1px solid #ddd; padding: 20px; margin: 10px; display: inline-block; width: 30%; }
+        :root {
+            --primary-color: #2563eb;
+            --dark-bg: #1e293b;
+            --text-main: #334155;
+            --light-gray: #f8fafc;
+        }
+
+        body { 
+            font-family: 'Inter', sans-serif; 
+            margin: 0; 
+            line-height: 1.6; 
+            color: var(--text-main);
+            background-color: #ffffff;
+        }
+
+        /* Modernized Navbar */
+        nav { 
+            background: #ffffff; 
+            color: var(--dark-bg); 
+            padding: 1.2rem 5%; 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav h1 { font-size: 1.5rem; margin: 0; color: var(--primary-color); }
+
+        /* Hero Section with Gradient */
+        .hero { 
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            padding: 100px 20px; 
+            text-align: center; 
+        }
+
+        .hero h1 { 
+            font-size: 3rem; 
+            margin-bottom: 1rem; 
+            color: var(--dark-bg);
+            font-weight: 800;
+        }
+
+        .hero p { 
+            font-size: 1.2rem; 
+            max-width: 600px; 
+            margin: 0 auto 2rem; 
+            color: #64748b;
+        }
+
+        /* Flexbox Container */
+        .container { 
+            padding: 80px 5%; 
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        /* Elevated Cards */
+        .card { 
+            background: white;
+            border: 1px solid #e2e8f0; 
+            border-radius: 12px;
+            padding: 40px 25px; 
+            text-align: center; 
+            flex: 1;
+            min-width: 280px;
+            max-width: 350px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 { 
+            color: var(--dark-bg);
+            margin-bottom: 15px; 
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .container { padding: 40px 20px; }
+        }
     </style>
 </head>
 <body>
-    <nav><h1>MyBrand</h1></nav>
+    <nav>
+        <h1>MyBrand</h1>
+        <div style="font-weight: 500;">Features | About | Contact</div>
+    </nav>
+
     <header class="hero">
-        <h1>Welcome</h1>
-        <p>A simple, modern landing page.</p>
+        <h1>Welcome to the Future</h1>
+        <p>Build your next big idea faster with our streamlined, modern landing page components.</p>
+        <button style="background: var(--primary-color); color: white; border: none; padding: 12px 30px; border-radius: 6px; font-weight: 600; cursor: pointer;">Get Started</button>
     </header>
+
     <main class="container">
-        <div class="card"><h3>Feature 1</h3></div>
-        <div class="card"><h3>Feature 2</h3></div>
-        <div class="card"><h3>Feature 3</h3></div>
+        <div class="card">
+            <div style="font-size: 2rem; margin-bottom: 10px;">🚀</div>
+            <h3>Fast Performance</h3>
+            <p>Optimized for speed and efficiency right out of the box.</p>
+        </div>
+        <div class="card">
+            <div style="font-size: 2rem; margin-bottom: 10px;">📱</div>
+            <h3>Fully Responsive</h3>
+            <p>Looks great on everything from mobile phones to ultra-wide monitors.</p>
+        </div>
+        <div class="card">
+            <div style="font-size: 2rem; margin-bottom: 10px;">🔒</div>
+            <h3>Secure by Default</h3>
+            <p>Built with modern security best practices in mind.</p>
+        </div>
     </main>
 </body>
 </html>
